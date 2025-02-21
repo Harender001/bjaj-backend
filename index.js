@@ -3,10 +3,10 @@ const app = express();
 
 // Middleware to parse JSON bodies
 app.use(express.json());
-// app.use(cors({
-//     origin: 'http://localhost:3000',
-//     credentials: true
-//   }));
+app.use(cors({
+    origin: 'https://bjaj-frontend-gules.vercel.app',
+    credentials: true
+  }));
 
 // Constants for user details
 const USER_ID = "harender_singh_26042004";
