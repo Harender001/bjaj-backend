@@ -1,12 +1,16 @@
 const express = require('express');
+const cors = require('cors');
+
 const app = express();
+
+// Enable CORS
+app.use(cors({
+    origin: 'https://bjaj-frontend-gules.vercel.app', // Allow only this origin
+    credentials: true
+}));
 
 // Middleware to parse JSON bodies
 app.use(express.json());
-// app.use(cors({
-//     origin: 'https://bjaj-frontend-gules.vercel.app',
-//     credentials: true
-//   }));
 
 // Constants for user details
 const USER_ID = "harender_singh_26042004";
